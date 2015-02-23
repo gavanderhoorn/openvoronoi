@@ -51,7 +51,7 @@ message(STATUS "version_string.cmake: C++ compiler version: ${compiler_version}"
 
 set( vstring "//version_string.hpp - written by cmake. changes will be lost!\n"
              "#ifndef VERSION_STRING\n"
-             "#define VERSION_STRING \"${GIT_COMMIT_ID}\"\n"
+             "#define VERSION_STRING \"godel-${GIT_COMMIT_ID}\"\n"
              "#endif\n"
              " \n"
              "#ifndef BUILDTYPE_STRING\n"
