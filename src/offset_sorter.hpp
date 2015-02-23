@@ -289,7 +289,12 @@ std::set<HEVertex> loop_enclosed_vertices( std::vector<HEFace> in_loop_faces) {
         label_writer<MachiningGraph> lbl_wrt(g);
         boost::write_graphviz( out, g, lbl_wrt);
     }
-       
+
+    /// Return reference to machining graph
+    const MachiningGraph& getMachiningGraph() const {
+      return g;
+    }
+    
 protected:
     /// set of Loops, sorted by decreasing offset-distance
     std::multiset<OffsetLoop, OffsetLoopCompare> distance_sorted_loops; 
